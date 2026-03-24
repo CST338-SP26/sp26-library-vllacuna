@@ -3,8 +3,14 @@ package Utilities;
 import java.time.LocalDate;
 import java.util.Objects;
 
+/**
+ * Name: Von Andre Llacuna
+ * Date: 03/24/26
+ * FileName: Book.java
+ * AssignmentName: Project 01 Part 01/04: Book.java
+ */
 public class Book {
-    public static final int IBSN_ = 0;
+    public static final int ISBN_ = 0;
     public static final int TITLE_ = 1;
     public static final int SUBJECT_ = 2;
     public static final int PAGE_COUNT_ = 3;
@@ -19,7 +25,7 @@ public class Book {
     private int pageCount;
 
 
-    public Book(String isbn, String title, String subject, String author, LocalDate dueDate, int pageCount) {
+    public Book(String isbn, String title, String subject, int pageCount, String author, LocalDate dueDate) {
         this.isbn = isbn;
         this.title = title;
         this.subject = subject;
@@ -45,11 +51,11 @@ public class Book {
         return title + " by " + author + " ISBN: " + isbn;
     }
 
-    public String getIsbn() {
+    public String getISBN() {
         return isbn;
     }
 
-    public void setIsbn(String isbn) {
+    public void setISBN(String isbn) {
         this.isbn = isbn;
     }
 
