@@ -20,7 +20,30 @@ public class Reader {
         this.cardNumber = cardNumber;
         this.name = name;
         this.phone = phone;
-        books = new ArrayList<>;
+        books = new ArrayList<>();
+    }
+
+    public Code addBook(Book book) {
+        if (hasBook(book)) {
+            return Code.BOOK_ALREADY_CHECKED_OUT_ERROR;
+        } else {
+            return Code.SUCCESS;
+        }
+    }
+
+    public Code removeBook(Book book) {
+        if (!hasBook(book)) {
+            return Code.READER_DOESNT_HAVE_BOOK_ERROR;
+        }
+        if (books.remove(book)) {
+            return Code.SUCCESS;
+        } else {
+            return Code.READER_COULD_NOT_REMOVE_BOOK_ERROR;
+        }
+    }
+
+    public boolean hasBook(Book book) {
+        return books.contains(book);
     }
 
     public int getCardNumber() {
