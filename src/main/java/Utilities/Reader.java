@@ -4,6 +4,12 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
+/**
+ * Name: Von Andre Llacuna
+ * Date: 03/25/26
+ * FileName: Reader.java
+ * AssignmentName: Project 01 Part 02/04: Reader.java
+ */
 public class Reader {
     public static final int CARD_NUMBER_ = 0;
     public static final int NAME_ = 1;
@@ -26,9 +32,10 @@ public class Reader {
     public Code addBook(Book book) {
         if (hasBook(book)) {
             return Code.BOOK_ALREADY_CHECKED_OUT_ERROR;
-        } else {
-            return Code.SUCCESS;
         }
+        books.add(book);
+        return Code.SUCCESS;
+
     }
 
     public Code removeBook(Book book) {
