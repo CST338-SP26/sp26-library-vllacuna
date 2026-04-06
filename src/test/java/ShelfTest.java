@@ -6,7 +6,9 @@
     Author: Andrea Ultreras
     Date: 03/01/21
  */
+import Utilities.Book;
 import Utilities.Code;
+import Utilities.Shelf;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
